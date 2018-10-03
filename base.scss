@@ -13,3 +13,44 @@
     display: none;
   }
 }
+/**/
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures contextual;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.8), 0 0 0.05em rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-feature-settings: "liga" 1;
+  font-feature-settings: "frac" 1;
+  font-feature-settings: "ordn" 1;
+  font-feature-settings: "zero" 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12.5%;
+  max-width: 1400px;
+  counter-reset: sidenote-counter;
+}
+
+@supports (font-variant-ligatures: common-ligatures) {
+  body {
+    font-feature-settings: normal;
+    font-variant-ligatures: common-ligatures;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-variant-numeric: diagonal-fractions;
+    font-variant-numeric: ordinal;
+    font-variant-numeric: slashed-zero;
+  }
+}
