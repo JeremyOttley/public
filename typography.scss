@@ -1,0 +1,63 @@
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  tr {
+    border: 1px solid #ddd;
+    padding: .35em;
+    &:nth-child(even) {
+      background: #f8f8f8;
+    }
+  }
+  th, td {
+    padding: .625em;
+    text-align: left;
+  }
+  th {
+    background: #999;
+    color: #fff;
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+p.dialogue {
+  &:before {
+    content: "\275D";
+  }
+  &:after {
+    content: "\275E";
+  }
+}
+
+span {
+  &.irony:after {
+    content: "\2E46";
+  }
+  &.lovepoint:after {
+    content: "\2E43";
+  }
+  &.certpoint:after {
+    content: "\2E44";
+  }
+  &.authpoint:after {
+    content: "\2E45";
+  }
+  &.accpoint:after {
+    content: "\2E47";
+  }
+  &.doublepoint:after {
+    content: "\2E48";
+  }
+}
